@@ -1,6 +1,6 @@
 # **DailyQuiz - задание на летнюю школу от Surf**
 
-<video src="https://github.com/igorverkh/dailyquiz/assets/quiz.mp4" width="300" />
+[<video src="https://github.com/igorverkh/dailyquiz/assets/quiz.mp4"/>](https://github.com/user-attachments/assets/a7e6532b-e422-4124-a0f7-c936287faa4f)
 
 ## Технологии
 - **UI**: Jetpack Compose
@@ -22,6 +22,8 @@
 - Фикс отображения результатов  
   _(по макету в бд не хранятся данные по вопросам, поэтому когда я перенес отображение в другой экран, в который для чистоты передается только id прохождения, теперь нужно добавлять и данные по вопросам в бд, а я очень очень хочу спать)_
 - Избавиться от месива в некоторых частях кода
+
+https://github.com/user-attachments/assets/0006a1c3-a4f7-45b6-a1dd-715b1324bcec
 
 ## Архитектура
 3 Gradle модуля:
