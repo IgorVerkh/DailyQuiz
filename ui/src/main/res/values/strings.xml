@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_quiz_button">Начать викторину</string>
+    <string name="welcome_title">Добро пожаловать в DailyQuiz!</string>
+    <string name="cant_navigate_prev_question_hint">Вернуться к предыдущим вопросам нельзя</string>
+    <string name="history">История</string>
+    <string name="time_is_up">Время вышло!</string>
+    <string name="you_didnt_make_it_in_time">Вы не успели завершить викторину. Попробуйте еще раз!</string>
+</resources>

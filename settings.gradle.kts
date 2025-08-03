@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "DailyQuiz"
 include(":app")
+include(":ui")
+include(":data")

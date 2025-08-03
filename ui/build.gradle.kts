@@ -1,21 +1,19 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "2.1.20-RC"
 }
 
 android {
-    namespace = "com.example.dailyquiz"
+    namespace = "com.example.ui"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.dailyquiz"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -42,7 +40,7 @@ android {
 dependencies {
 
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
@@ -52,18 +50,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    // Koin
+    // Koin DI
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
+    // collectAsStateWithLifecycle
     implementation(libs.androidx.lifecycle.runtime.compose)
-    // UI Module
-    implementation(project(":ui"))
     // Navigation
     implementation(libs.androidx.navigation.compose)
+    // Kotlinx Serialization
+    implementation(libs.kotlinx.serialization.json)
     // Data Module
     implementation(project(":data"))
 }
